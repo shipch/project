@@ -3,67 +3,34 @@
 <head>
 	<title>New World</title>
 	<meta charset="utf-8">
-	<style type="text/css">
-      #wrapper {
-          width: 960px;
-          margin: -30px auto 0;
-      }
-      #map {
-          width: 960px;
-          height: 580px;
-          position: relative;
-      }
-      #clock {
-        left: 65px;
-      font-family: verdana;
-      font-size: 15px;
-      }
-      .stroke {
-        fill: none;
-        stroke: #888;
-        stroke-width: 2px;
-      }
-      
-      .fill {
-        fill: #fff;
-      }
-      
-      .graticule {
-        fill: none;
-        stroke: #777;
-        stroke-width: .5px;
-        stroke-opacity: .5;
-      }
-      
-      .land {
-        fill: #222;
-      }
-      
-      .boundary {
-        fill: none;
-        stroke: #fff;
-        stroke-width: .5px;
-      }
-      .country {
-          stroke: white;
-      }
 
-      .county-border {
-    fill: none;
-    stroke: white;
-    pointer-events: none;
-  }
-  .axis text {
-    font: 10px sans-serif;
-  }
 
-  .axis line, .axis path {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-  }
-	</style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
 
 </head>
 <body>
@@ -76,11 +43,85 @@
 	<script src="http://d3js.org/queue.v1.min.js"></script>
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
 
+<div class="wrapper">
+    <div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+    Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+    Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+  -->
+
+      <div class="sidebar-wrapper">
+            <div class="logo">
+
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="ti-panel"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="maps.html">
+                        <i class="ti-map"></i>
+                        <p>Maps</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="top10.html">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Table</p>
+                    </a>
+                </li>
+
+            </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">MAPS</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="newindex.html">
+                <p>HOME</p>
+                            </a>
+                        </li>
+            <li>
+                            <a href="#">
+                <p>login</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+  <div class="content">
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="content">
 	<label for="year">Year :</label>
 	<input type="text" id="year" style="border:0; color:#f6931f; font-weight:bold; " />
 	</p>
 	<div id="slider" style="width: 200px;"></div>
-	
+	<br>
 	<div id="selector">
 		<select name="indicator" id="indicator">
 			<option value="" id="" disabled selected>Choose Your Indicator</option>
@@ -91,7 +132,15 @@
 	<div id="wrapper">	
    		<div id="map"></div>   		
    		<span id="range"></span>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
 	</div>
+  </div>
 
 	<script src = "/javascripts/get_tablelist.js"></script>
 	<script src="/javascripts/newworld2.js"></script>
